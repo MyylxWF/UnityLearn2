@@ -58,9 +58,9 @@
       var buildUrl = "Build";
       var loaderUrl = buildUrl + "/XXL.loader.js";
       var config = {
-        dataUrl: buildUrl + "/XXL.data.unityweb",
-        frameworkUrl: buildUrl + "/XXL.framework.js.unityweb",
-        codeUrl: buildUrl + "/XXL.wasm.unityweb",
+        dataUrl: buildUrl + "/XXL.data",
+        frameworkUrl: buildUrl + "/XXL.framework.js",
+        codeUrl: buildUrl + "/XXL.wasm",
         streamingAssetsUrl: "StreamingAssets",
         companyName: "DefaultCompany",
         productName: "Match 3 Jewel Full 298 Levels",
@@ -90,6 +90,8 @@
 
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
+
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 

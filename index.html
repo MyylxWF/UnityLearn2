@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | Match 3 Game</title>
+    <title>Unity WebGL Player | Parkour</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
   </head>
@@ -20,7 +20,7 @@
       <div id="unity-footer">
         <div id="unity-webgl-logo"></div>
         <div id="unity-fullscreen-button"></div>
-        <div id="unity-build-title">Match 3 Game</div>
+        <div id="unity-build-title">Parkour</div>
       </div>
     </div>
     <script>
@@ -56,14 +56,14 @@
       }
 
       var buildUrl = "Build";
-      var loaderUrl = buildUrl + "/XXL.loader.js";
+      var loaderUrl = buildUrl + "/Parkour.loader.js";
       var config = {
-        dataUrl: buildUrl + "/XXL.data.unityweb",
-        frameworkUrl: buildUrl + "/XXL.framework.js.unityweb",
-        codeUrl: buildUrl + "/XXL.wasm.unityweb",
+        dataUrl: buildUrl + "/Parkour.data.unityweb",
+        frameworkUrl: buildUrl + "/Parkour.framework.js.unityweb",
+        codeUrl: buildUrl + "/Parkour.wasm.unityweb",
         streamingAssetsUrl: "StreamingAssets",
-        companyName: "TTC",
-        productName: "Match 3 Game",
+        companyName: "DefaultCompany",
+        productName: "Parkour",
         productVersion: "1.0",
         showBanner: unityShowBanner,
       };
@@ -90,6 +90,8 @@
 
         canvas.style.width = window.innerWidth + 'px';
         canvas.style.height = window.innerHeight + 'px';
+
+        unityShowBanner('WebGL builds are not supported on mobile devices.');
       } else {
         // Desktop style: Render the game canvas in a window that can be maximized to fullscreen:
 
